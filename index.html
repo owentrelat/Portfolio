@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="./assets/Logo Trelat.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#accueil" class="active">Accueil</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cv">cv</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+    <header id="accueil">
+        <video autoplay muted loop plays-inline class="background">
+            <source src="./assets/background.mp4" type="video/mp4">
+
+        </video>
+        <div class="header-content">
+            <h1>PORTFOLIO</h1>
+        </div>
+    </header>
+        <section id="apropos" class="about-section">
+        <h2>A PROPOS</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="./assets/photo-profil.png" alt="Owen Trelat">
+            </div>
+            <div class="about-content">
+                <p>Bonjour, je suis <span class="highlight">Owen Trelat</span>.</p>
+                <p>Étudiant en BUT MMI, spécialisé en création numérique.</p>
+                <p class="location">📍Limoges</p>
+                <a href="#cv" class="btn-cv">Lien vers mon cv</a>
+            </div>
+        </div>
+        </section>
+
+    <section id="competences" class="competences-section">
+        <h2>MES COMPÉTENCES</h2>
+        
+        <div class="competences-container">
+            <div class="competence-category">
+                <h3>Graphique</h3>
+                <div class="skills-list">
+                    <span class="skill">
+                        <img src="./assets/icons/figma-icon.png" alt="Figma">
+                        Figma
+                    </span>
+                    <span class="skill">
+                        <img src="./assets/icons/ai-icon.png" alt="Illustrator">
+                        Illustrator
+                    </span>
+                    <span class="skill">
+                        <img src="./assets/icons/ps-icon.png" alt="Photoshop">
+                        Photoshop
+                    </span>
+                    <span class="skill">
+                        <img src="./assets/icons/ae-icon.png" alt="After Effects">
+                        After Effects
+                    </span>
+                    <span class="skill">
+                        <img src="./assets/icons/blender-icon.png" alt="Blender">
+                        Blender
+                    </span>
+                </div>
+            </div>
+
+            <div class="competence-category">
+                <h3>Développement</h3>
+                <div class="skills-list">
+                    <span class="skill">
+                        <img src="./assets/icons/wordpress-icon.png" alt="WordPress">
+                        WordPress
+                    </span>
+                    <span class="skill">
+                        <img src="./assets/icons/css-icon.png" alt="CSS">
+                        CSS
+                    </span>
+                    <span class="skill">
+                        <img src="./assets/icons/html-icon.png" alt="HTML">
+                        HTML
+                    </span>
+                    <span class="skill">
+                        <img src="./assets/icons/js-icon.png" alt="JavaScript">
+                        JavaScript
+                    </span>
+                    <span class="skill">
+                        <img src="./assets/icons/mysql-icon.png" alt="MySQL">
+                        MySQL
+                    </span>
+                    <span class="skill">
+                        <img src="./assets/icons/php-icon.png" alt="PHP">
+                        PHP
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section id="projets" class="projets-section">
+        <h2>MES PROJETS</h2>
+        
+        <div class="carousel-container" data-carousel="0">
+            <button class="carousel-btn prev">❮</button>
+            
+            <div class="carousel-wrapper">
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <img src="./assets/album/Bushi Tape 4,2.jpg" alt="Pochette d'album">
+                        <div class="project-info">
+                            <h3>Pochette d'album</h3>
+                            <p>J'ai réalisé une pochette d'album pour un concours organisé par le rappeur Bu$hi. L'objectif était de créer une couverture percutante et fidèle à son univers, en jouant sur l'ambiance, la composition et l'identité visuelle.</p>
+                            <a href="/Page/album.html" class="btn-more">En savoir plus <span>→</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <img src="./assets/dossierdepress.png" alt="Dossier de presse">
+                        <div class="project-info">
+                            <h3>Dossier de presse</h3>
+                            <p>Dan un projet universitaire j'ai du creer un dossier de presse pour un festival j'ai decider de partir sur un festival underground avec un style sombre pour aller avec la DA des invites</p>
+                            <a href="#" class="btn-more">En savoir plus <span>→</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <img src="./assets/pull-MMI.png" alt="Pull MMI ">
+                        <div class="project-info">
+                            <h3>Pull MMI</h3>
+                            <p>Dans mon curcuse universitaire j'ai eu la chance de participer a un concours pour creer le design du futur pull de mon departement</p>
+                            <a href="#" class="btn-more">En savoir plus <span>→</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <img src="./assets/branding.png" alt="Branding UGC">
+                        <div class="project-info">
+                            <h3>Branding UGC</h3>
+                            <p>Un autre projet universitaire etait de creer pour les cinema UGC une game de produit par rapport a des theme de film. J'ai choisi horreur et space opera</p>
+                            <a href="#" class="btn-more">En savoir plus <span>→</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <img src="./assets/carte.png" alt="Jeux de carte">
+                        <div class="project-info">
+                            <h3>Jeux de carte</h3>
+                            <p>Un nouveau projet universitaire etait de creer un jeux de carte avec des mouvement artistique et un artiste representant ce mouvement 30 carte recto verso au total</p>
+                            <a href="#" class="btn-more">En savoir plus <span>→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-btn next">❯</button>
+        </div>
+    </section>
+
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>CONTACT</h2>
+        
+        <div class="contact-container">
+            <div class="contact-group">
+                <h3>Réseaux sociaux</h3>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://www.tiktok.com/@owentr040?lang=fr" target="_blank">
+                            <img src="./assets/icons/tiktok-icon.png" alt="TikTok">
+                            TikTok
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/owen.trlt/" target="_blank">
+                            <img src="./assets/icons/instagram-icon.png" alt="Instagram">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Nrv304" target="_blank">
+                            <img src="./assets/icons/github-icon.png" alt="GitHub">
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/owen-trelat-139123332/" target="_blank">
+                            <img src="./assets/icons/linkedin-icon.png" alt="LinkedIn">
+                            LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-group">
+                <h3>E-mail</h3>
+                <a href="mailto:owentrelat04@gmail.com" class="email-link">
+                    owentrelat04@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
