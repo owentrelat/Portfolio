@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  overflow: visible;
+  margin: 0;
+  background-color: #0a0a0a;
+  font-family: "Orbitron", sans-serif;
+}
+
+.container {
+  position: static;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: none;
+  width: 100%;
+  max-width: none;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.36);
+  border-radius: 50px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  border: 1px solid rgba(255, 255, 255, 0.41);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+}
+
+.nav-links {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links li a:hover {
+  color: #ff0000;
+}
+
+.nav-links li a.active {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff0000;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .nav-links {
+    position: static;
+    transform: none;
+    margin-left: auto; /* pousse les liens à droite */
+    gap: 20px;
+  }
+
+  .navbar-container {
+    justify-content: space-between;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+}
+
+.header {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.header h1 {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 3.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ff0000;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  margin-top: 80px;
+}
+
+.content-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #ff0000;
+            margin-bottom: 25px;
+            margin-top: 60px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #ddd;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .design-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin: 60px 0;
+        }
+
+        .design-section.reverse {
+            direction: rtl;
+        }
+
+        .design-section.reverse > * {
+            direction: ltr;
+        }
+
+        .design-description h3 {
+            font-size: 1.8em;
+            color: #ff0000;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .design-description p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+            max-height: 700px;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+            background: #0a0a0a;
+            border-radius: 10px;
+            border: 2px solid #ff0000;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: 2px solid #666;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-btn.prev {
+            left: 10px;
+        }
+
+        .carousel-btn.next {
+            right: 10px;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(255, 0, 0, 1);
+            border-color: #ff0000;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 80px 0 60px 0;
+        }
+
+        .back-link a {
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 15px 40px;
+            border: 2px solid #ff0000;
+            border-radius: 50px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .back-link a:hover {
+            background: #ff0000;
+            color: #000;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 800px) {
+            .nav-links {
+                position: static;
+                transform: none;
+                margin-left: auto;
+                gap: 20px;
+            }
+
+            .navbar-container {
+                justify-content: space-between;
+            }
+
+            .logo img {
+                height: 60px;
+            }
+
+            .nav-links li a {
+                font-size: 14px;
+            }
+
+            .nav-links li a.active {
+                font-size: 20px;
+            }
+
+            .header h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            .content-section {
+                padding: 40px 20px;
+            }
+
+            .design-section,
+            .design-section.reverse {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                direction: ltr;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
