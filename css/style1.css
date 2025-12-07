@@ -294,6 +294,59 @@ section {
   transform: scale(1.05);
 }
 
+.competences-section {
+    background-color: #0a0a0a;
+    padding: 0px 40px 40px 80px;
+    max-width: 1200px;
+}
+
+.competences-section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    font-style: italic;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.competences-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.competence-category h3 {
+    font-size: 32px;
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.skill img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
 @media (max-width: 968px) {
   .album-container,
   .album-container.reverse {
