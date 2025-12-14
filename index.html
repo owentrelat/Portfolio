@@ -7,8 +7,7 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <div class="container">
-    <nav>
+    <nav id="navbar">
         <div class="navbar-container">
             <div class="logo">
                 <img src="./assets/Logo Trelat.png" alt="Logo">
@@ -18,22 +17,25 @@
                 <li><a href="#apropos">À propos</a></li>
                 <li><a href="#accueil" class="active">Accueil</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#cv">cv</a></li>
+                <li><a href="#cv">CV</a></li>
             </ul>
         </div>
     </nav>
-</div>
-    <header id="accueil">
-        <video autoplay muted loop plays-inline class="background">
-            <source src="./assets/background.mp4" type="video/mp4">
 
+    <header id="accueil">
+        <video autoplay muted loop playsinline class="background">
+            <source src="./assets/background.mp4" type="video/mp4">
         </video>
         <div class="header-content">
             <h1>PORTFOLIO</h1>
         </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
     </header>
-        <section id="apropos" class="about-section">
-        <h2>A PROPOS</h2>
+
+    <section id="apropos" class="about-section">
+        <h2>À PROPOS</h2>
         <div class="about-container">
             <div class="about-image">
                 <img src="./assets/photo-profil.png" alt="Owen Trelat">
@@ -41,15 +43,14 @@
             <div class="about-content">
                 <p>Bonjour, je suis <span class="highlight">Owen Trelat</span>.</p>
                 <p>Étudiant en BUT MMI, spécialisé en création numérique.</p>
-                <p class="location">📍Limoges</p>
-                <a href="#cv" class="btn-cv">Lien vers mon cv</a>
+                <p class="location">📍 Limoges</p>
+                <a href="#cv" class="btn-cv">Voir mon CV</a>
             </div>
         </div>
-        </section>
+    </section>
 
     <section id="competences" class="competences-section">
         <h2>MES COMPÉTENCES</h2>
-        
         <div class="competences-container">
             <div class="competence-category">
                 <h3>Graphique</h3>
@@ -108,12 +109,11 @@
             </div>
         </div>
     </section>
-        <section id="projets" class="projets-section">
+
+    <section id="projets" class="projets-section">
         <h2>MES PROJETS</h2>
-        
-        <div class="carousel-container" data-carousel="0">
-            <button class="carousel-btn prev">❮</button>
-            
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
             <div class="carousel-wrapper">
                 <div class="carousel-slide">
                     <div class="project-card">
@@ -131,7 +131,7 @@
                         <img src="./assets/press/affiche.jpg" alt="Dossier de presse">
                         <div class="project-info">
                             <h3>Dossier de presse</h3>
-                            <p>Dan un projet universitaire j'ai du creer un dossier de presse pour un festival j'ai decider de partir sur un festival underground avec un style sombre pour aller avec la DA des invites</p>
+                            <p>Dans un projet universitaire j'ai dû créer un dossier de presse pour un festival. J'ai décidé de partir sur un festival underground avec un style sombre pour aller avec la DA des invités.</p>
                             <a href="./Page/presse.html" class="btn-more">En savoir plus <span>→</span></a>
                         </div>
                     </div>
@@ -139,57 +139,32 @@
 
                 <div class="carousel-slide">
                     <div class="project-card">
-                        <img src="./assets/pull/Front.jpg" alt="Pull MMI ">
+                        <img src="./assets/pull/Front.jpg" alt="Pull MMI">
                         <div class="project-info">
                             <h3>Pull MMI</h3>
-                            <p>Dans mon curcuse universitaire j'ai eu la chance de participer a un concours pour creer le design du futur pull de mon departement</p>
+                            <p>Dans mon cursus universitaire j'ai eu la chance de participer à un concours pour créer le design du futur pull de mon département.</p>
                             <a href="./Page/pull.html" class="btn-more">En savoir plus <span>→</span></a>
                         </div>
                     </div>
                 </div>
 
-<!--                <div class="carousel-slide">
-                    <div class="project-card">
-                        <img src="./assets/branding.png" alt="Branding UGC">
-                        <div class="project-info">
-                            <h3>Branding UGC</h3>
-                            <p>Un autre projet universitaire etait de creer pour les cinema UGC une game de produit par rapport a des theme de film. J'ai choisi horreur et space opera</p>
-                            <a href="#" class="btn-more">En savoir plus <span>→</span></a>
-                        </div>
-                    </div>
-                </div>-->
-
                 <div class="carousel-slide">
                     <div class="project-card">
-                        <img src="./assets/branding.png" alt="Motion design">
+                        <img src="./assets/motion design/motion design.jpg" alt="Motion design">
                         <div class="project-info">
                             <h3>Motion design</h3>
-                            <p>Un autre projet universitaire etait prendre une affiche vectoriel d'une ville est de l'anime j'ai choisi une affiche avec beaucoup d'element a anime surtout des fenetre</p>
-                            <a href="#" class="btn-more">En savoir plus <span>→</span></a>
+                            <p>Un autre projet universitaire était de prendre une affiche vectorielle d'une ville et de l'animer. J'ai choisi une affiche avec beaucoup d'éléments à animer, surtout des fenêtres.</p>
+                            <a href="./Page/motion.html" class="btn-more">En savoir plus <span>→</span></a>
                         </div>
                     </div>
                 </div>
-
-<!--                 <div class="carousel-slide">
-                    <div class="project-card">
-                        <img src="./assets/carte.png" alt="Jeux de carte">
-                        <div class="project-info">
-                            <h3>Jeux de carte</h3>
-                            <p>Un nouveau projet universitaire etait de creer un jeux de carte avec des mouvement artistique et un artiste representant ce mouvement 30 carte recto verso au total</p>
-                            <a href="#" class="btn-more">En savoir plus <span>→</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
-
-            <button class="carousel-btn next">❯</button>
+            </div>
+            <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
         </div>
-
     </section>
 
     <section id="contact" class="contact-section">
         <h2>CONTACT</h2>
-        
         <div class="contact-container">
             <div class="contact-group">
                 <h3>Réseaux sociaux</h3>
@@ -229,7 +204,5 @@
             </div>
         </div>
     </section>
-
     <script src="./script.js"></script>
-</body>
 </html>
