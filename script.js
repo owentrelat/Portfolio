@@ -66,18 +66,47 @@ const navLinks = document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", () => {
   let current = "";
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (scrollY >= sectionTop - 200) {
-      current = section.getAttribute("id");
-    }
-  });
+  
+  // Si on est en haut de la page, activer "accueil"
+  if (scrollY < 100) {
+    current = "accueil";
+  } else {
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (scrollY >= sectionTop - 200) {
+        current = section.getAttribute("id");
+      }
+    });
+  }
 
   navLinks.forEach((link) => {
     link.classList.remove("active");
-    if (link.getAttribute("href").includes(current)) {
+    if (current && link.getAttribute("href").includes(current)) {
       link.classList.add("active");
     }
   });
 });
+
+       function openModal(element) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const img = element.querySelector('img');
+            
+            modal.classList.add('active');
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        
